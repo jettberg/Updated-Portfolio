@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg: #f8fafc;
+  --bg-soft: #eef6f7;
+  --text: #0f172a;
+  --muted: #475569;
+  --dark: #0d1117;
+  --accent: #0f766e;
+  --accent-bright: #67e8f9;
+  --border: #e2e8f0;
+  --card: #ffffff;
+  --shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(103, 232, 249, 0.25), transparent 32rem),
+    radial-gradient(circle at top right, rgba(139, 92, 246, 0.18), transparent 28rem),
+    linear-gradient(180deg, #f8fafc 0%, #eef6f7 100%);
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: var(--accent-bright);
+  color: var(--dark);
+}

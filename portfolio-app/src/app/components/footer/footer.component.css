@@ -1,11 +1,14 @@
 .footer {
-  padding: 36px 7%;
-  background: #0d1117;
+  margin: 48px 7% 24px;
+  padding: 28px;
+  border-radius: 28px;
+  background: rgba(13, 17, 23, 0.95);
   color: #c9d1d9;
   display: flex;
   justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
 }
 
 .footer p {
@@ -14,13 +17,14 @@
 
 .footer-links {
   display: flex;
-  gap: 18px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .footer-links a {
   color: #67e8f9;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .footer-links a:hover {

@@ -1,0 +1,158 @@
+.projects-page {
+  padding: 72px 7%;
+}
+
+.page-heading {
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  color: #0f766e;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 12px;
+}
+
+.page-heading h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+  margin: 0 0 20px;
+}
+
+.page-heading p {
+  color: #475569;
+  font-size: 1.15rem;
+  max-width: 760px;
+}
+
+.old-portfolio-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  padding: 32px;
+  margin-bottom: 48px;
+  border-radius: 28px;
+  background: #0d1117;
+  color: white;
+}
+
+.old-portfolio-card h2 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+}
+
+.old-portfolio-card p {
+  color: #c9d1d9;
+  max-width: 760px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.project-card {
+  overflow: hidden;
+  border-radius: 28px;
+  background: white;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.image-wrap {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #e2e8f0;
+}
+
+.image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 26px;
+}
+
+.project-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.project-content h2 {
+  margin: 0;
+  font-size: 1.55rem;
+}
+
+.project-content p {
+  color: #475569;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #ecfeff;
+  color: #0e7490;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.tech-list span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.primary {
+  background: #0d1117;
+  color: white;
+}
+
+.secondary {
+  background: white;
+  color: #0d1117;
+  border: 1px solid #cbd5e1;
+}
+
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .old-portfolio-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

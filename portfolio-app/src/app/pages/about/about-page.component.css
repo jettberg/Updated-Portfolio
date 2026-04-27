@@ -1,0 +1,78 @@
+.about-page {
+  padding: 72px 7%;
+}
+
+.about-header {
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  color: #0f766e;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 12px;
+}
+
+.about-header h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+  margin: 0;
+}
+
+.about-content {
+  max-width: 800px;
+  margin-bottom: 48px;
+}
+
+.about-content p {
+  font-size: 1.15rem;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.about-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.about-card {
+  background: white;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+}
+
+.about-card h2 {
+  margin-bottom: 16px;
+}
+
+.about-card ul {
+  padding-left: 20px;
+}
+
+.about-card li {
+  margin-bottom: 8px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills span {
+  background: #f1f5f9;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  .about-sections {
+    grid-template-columns: 1fr;
+  }
+}

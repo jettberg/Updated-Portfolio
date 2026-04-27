@@ -1,0 +1,70 @@
+<section class="projects-page">
+  <div class="page-heading">
+    <p class="eyebrow">Portfolio Progression</p>
+    <h1>Projects I built throughout my software engineering program.</h1>
+    <p>
+      This collection shows my growth from static HTML/CSS pages into full-stack,
+      component-based applications using Angular, React, Node, Express, MongoDB,
+      REST APIs, mobile tooling, and testing.
+    </p>
+  </div>
+
+  <section class="old-portfolio-card">
+    <div>
+      <p class="eyebrow">Where I started</p>
+      <h2>My original portfolio</h2>
+      <p>
+        I’m keeping a link to my old portfolio as a before-and-after comparison.
+        It represents where I started with basic HTML and CSS, while this current
+        site shows the more modern, modular Angular approach I can build now.
+      </p>
+    </div>
+
+    <a class="button secondary" [href]="oldPortfolioUrl" target="_blank" rel="noopener">
+      View Old Portfolio
+    </a>
+  </section>
+
+  <div class="project-grid">
+    <article class="project-card" *ngFor="let project of projects">
+      <div class="image-wrap">
+        <img [src]="project.image" [alt]="project.title + ' screenshot'" />
+      </div>
+
+      <div class="project-content">
+        <div class="project-title-row">
+          <h2>{{ project.title }}</h2>
+          <span *ngIf="project.featured" class="badge">Featured</span>
+        </div>
+
+        <p>{{ project.description }}</p>
+
+        <div class="tech-list">
+          <span *ngFor="let item of project.tech">{{ item }}</span>
+        </div>
+
+        <div class="project-links">
+          <a
+            *ngIf="project.liveUrl"
+            class="button primary"
+            [href]="project.liveUrl"
+            target="_blank"
+            rel="noopener"
+          >
+            Live Demo
+          </a>
+
+          <a
+            *ngIf="project.githubUrl"
+            class="button secondary"
+            [href]="project.githubUrl"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
