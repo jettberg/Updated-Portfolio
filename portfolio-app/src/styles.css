@@ -31,6 +31,7 @@ body {
     radial-gradient(circle at top right, rgba(139, 92, 246, 0.18), transparent 28rem),
     linear-gradient(180deg, #f8fafc 0%, #eef6f7 100%);
   min-height: 100vh;
+  line-height: 1.6;
 }
 
 img {
@@ -51,4 +52,30 @@ textarea {
 ::selection {
   background: var(--accent-bright);
   color: var(--dark);
+}
+
+/* GLOBAL CARD HOVER EFFECT */
+.project-card,
+.timeline-card,
+.hero-card,
+.about-card,
+.contact-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover,
+.timeline-card:hover,
+.hero-card:hover,
+.about-card:hover,
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 100px rgba(15, 23, 42, 0.14);
+}
+
+.button {
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
 }
