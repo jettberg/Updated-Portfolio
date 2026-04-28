@@ -1,0 +1,32 @@
+<section class="progression-page">
+  <div class="page-heading">
+    <p class="eyebrow">My Progression</p>
+    <h1>How my work evolved from basic pages to full-stack applications.</h1>
+    <p>
+      This page tells the story behind my portfolio: where I started, what each
+      project taught me, and how my approach to building software has changed.
+    </p>
+  </div>
+
+  <div class="timeline">
+    <article class="timeline-item" *ngFor="let item of progressionItems">
+      <div class="timeline-number">{{ item.label }}</div>
+
+      <div class="timeline-card">
+        <div class="timeline-image">
+          <img [src]="item.image" [alt]="item.subtitle + ' screenshot'" />
+        </div>
+
+        <div class="timeline-content">
+          <p class="item-subtitle">{{ item.subtitle }}</p>
+          <h2>{{ item.title }}</h2>
+          <p class="description">{{ item.description }}</p>
+
+          <div class="lesson-list">
+            <span *ngFor="let lesson of item.lessons">{{ lesson }}</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
