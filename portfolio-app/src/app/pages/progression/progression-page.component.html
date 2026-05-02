@@ -41,10 +41,26 @@
         </div>
 
         <div class="comparison-images">
-          <img [src]="item.image" alt="Old portfolio" />
-          <img [src]="item.image2" alt="New portfolio" />
+          <figure>
+            <span>Before</span>
+            <img [src]="item.image" alt="Old portfolio" />
+          </figure>
+
+          <figure>
+            <span>After</span>
+            <img [src]="item.image2" alt="New portfolio" />
+          </figure>
         </div>
       </div>
-  </article>
+    </article>
   </div>
+  <section class="progression-close">
+    <p class="eyebrow">What this means now</p>
+    <h2>I’m not finished building — I’m just getting better at building intentionally.</h2>
+    <p>
+      Each project taught me something different: structure, APIs, authentication,
+      frontend architecture, testing, and design polish. My goal now is to keep
+      applying those lessons to real projects and become stronger with each build.
+    </p>
+  </section>
 </section>

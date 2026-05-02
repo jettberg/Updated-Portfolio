@@ -13,5 +13,5 @@ import { PROJECTS } from '../../data/projects.data';
 export class ProjectsPageComponent {
   projects = PROJECTS;
 
-  oldPortfolioUrl = 'https://jettberg.github.io/portfolio-website/';
+  oldPortfolioUrl = 'https://jettberg.github.io/Portfolio-website/';
 }

@@ -12,13 +12,18 @@ export class ProgressionPageComponent {
     progressionItems = [
         {
             label: '01',
-            title: 'Starting with HTML & CSS',
-            subtitle: 'Original Portfolio',
+            title: 'Where I Started',
+            subtitle: 'Original Portfolio vs Current Portfolio',
             description:
-                'My first portfolio was built with basic HTML and CSS...',
+                'My first portfolio was built with basic HTML and CSS. At the time, my main focus was understanding page structure, navigation, styling, and simply getting a complete site working. This current Angular portfolio shows how my approach has changed: I now think more about reusable components, routing, maintainability, visual polish, and how the project will scale over time.',
             image: '/assets/images/projects/old-portfolio.png',
-            image2: '/assets/images/projects/new-portfolio.png', // or new version comparison
-            lessons: ['Page structure', 'Navigation', 'Basic styling', 'Responsive thinking']
+            image2: '/assets/images/projects/new-portfolio.png',
+            lessons: [
+                'From static pages to component-based structure',
+                'Cleaner routing and navigation',
+                'More intentional visual design',
+                'Thinking beyond “does it work?” into “is it maintainable?”'
+            ]
         },
         {
             label: '02',

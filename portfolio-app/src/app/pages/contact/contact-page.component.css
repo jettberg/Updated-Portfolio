@@ -3,7 +3,7 @@
 }
 
 .contact-header {
-  max-width: 850px;
+  max-width: 900px;
   margin-bottom: 44px;
 }
 
@@ -16,24 +16,52 @@
 }
 
 .contact-header h1 {
-  font-size: clamp(2.8rem, 7vw, 6rem);
+  font-size: clamp(3rem, 8vw, 6.5rem);
   line-height: 0.95;
-  letter-spacing: -0.07em;
+  letter-spacing: -0.08em;
   margin: 0 0 20px;
 }
 
 .contact-header p {
   color: #475569;
   font-size: 1.2rem;
+  max-width: 760px;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.primary {
+  background: #0d1117;
+  color: white;
+}
+
+.secondary {
+  background: white;
+  color: #0d1117;
+  border: 1px solid #cbd5e1;
 }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 28px;
 }
 
-.contact-card {
+.contact-card,
+.availability-card {
   background: white;
   padding: 32px;
   border-radius: 28px;
@@ -41,13 +69,22 @@
   border: 1px solid #e2e8f0;
 }
 
-.contact-card h2 {
+.contact-card h2,
+.availability-card h2 {
   margin-top: 0;
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+}
+
+.card-intro,
+.availability-card p {
+  color: #64748b;
 }
 
 .contact-list {
   display: grid;
   gap: 18px;
+  margin-top: 28px;
 }
 
 .contact-list p {
@@ -71,32 +108,72 @@
 }
 
 .social-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
 }
 
 .social-links a {
-  display: inline-block;
-  padding: 12px 16px;
-  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 18px;
   background: #0d1117;
   color: white;
   text-decoration: none;
   font-weight: 800;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .social-links a:hover {
   background: #0f766e;
+  transform: translateY(-2px);
 }
 
-.note {
-  margin-top: 24px;
-  color: #64748b;
+.social-links img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
 }
 
-@media (max-width: 800px) {
-  .contact-grid {
+.availability-card {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  background: #0d1117;
+  color: white;
+}
+
+.availability-card p {
+  color: #c9d1d9;
+  max-width: 760px;
+}
+
+.availability-card .eyebrow {
+  color: #67e8f9;
+}
+
+.availability-card .primary {
+  background: #67e8f9;
+  color: #0d1117;
+  white-space: nowrap;
+}
+
+@media (max-width: 850px) {
+  .contact-grid,
+  .availability-card {
     grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    display: grid;
+  }
+
+  .availability-card {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
