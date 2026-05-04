@@ -31,12 +31,14 @@
   background: linear-gradient(135deg, #67e8f9, #8b5cf6);
   color: #0d1117;
   box-shadow: 0 12px 32px rgba(103, 232, 249, 0.22);
+  flex: 0 0 auto;
 }
 
 .nav-links {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .nav-links a {
@@ -54,9 +56,32 @@
   background: #67e8f9;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 760px) {
   .navbar {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
+    gap: 14px;
+    padding: 16px 5%;
+  }
+
+  .nav-links {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 8px 11px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-links {
+    gap: 6px;
+  }
+
+  .nav-links a {
+    padding: 7px 9px;
+    font-size: 0.84rem;
   }
 }

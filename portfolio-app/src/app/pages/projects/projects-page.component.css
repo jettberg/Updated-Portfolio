@@ -108,6 +108,7 @@
   color: #0e7490;
   font-size: 0.8rem;
   font-weight: 800;
+  white-space: nowrap;
 }
 
 .tech-list {
@@ -159,5 +160,40 @@
   .old-portfolio-card {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-page {
+    padding: 54px 6%;
+  }
+
+  .page-heading h1 {
+    font-size: clamp(2.35rem, 13vw, 4rem);
+    letter-spacing: -0.06em;
+  }
+
+  .page-heading p {
+    font-size: 1.05rem;
+  }
+
+  .old-portfolio-card,
+  .project-content {
+    padding: 24px;
+  }
+
+  .project-title-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
   }
 }

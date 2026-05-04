@@ -128,6 +128,47 @@
   font-weight: 800;
 }
 
+.alt-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content.full {
+  padding-bottom: 28px;
+}
+
+.comparison-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.comparison-images figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.comparison-images span {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(13, 17, 23, 0.88);
+  color: white;
+  font-weight: 900;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.comparison-images img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
 .progression-close {
   margin-top: 110px;
   padding: 42px;
@@ -150,11 +191,18 @@
   color: #c9d1d9;
 }
 
-
-
 @media (max-width: 900px) {
+  .progression-page {
+    padding: 60px 7%;
+  }
+
+  .timeline {
+    gap: 72px;
+  }
+
   .timeline-item {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .timeline-number {
@@ -163,5 +211,55 @@
 
   .timeline-card {
     grid-template-columns: 1fr;
+  }
+
+  .comparison-images {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-images img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .progression-page {
+    padding: 54px 6%;
+  }
+
+  .page-heading h1 {
+    font-size: clamp(2.35rem, 13vw, 4rem);
+    letter-spacing: -0.06em;
+  }
+
+  .page-heading p {
+    font-size: 1.05rem;
+  }
+
+  .timeline {
+    gap: 58px;
+  }
+
+  .timeline-content {
+    padding: 28px;
+  }
+
+  .timeline-number {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+  }
+
+  .timeline-image {
+    min-height: 240px;
+  }
+
+  .comparison-images img {
+    height: 230px;
+  }
+
+  .progression-close {
+    margin-top: 72px;
+    padding: 28px;
   }
 }

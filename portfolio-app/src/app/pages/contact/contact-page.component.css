@@ -101,6 +101,7 @@
 .contact-list span {
   color: #475569;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .contact-list a:hover {
@@ -163,17 +164,45 @@
 }
 
 @media (max-width: 850px) {
-  .contact-grid,
-  .availability-card {
-    grid-template-columns: 1fr;
-  }
-
   .contact-grid {
-    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .availability-card {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-page {
+    padding: 54px 6%;
+  }
+
+  .contact-header h1 {
+    font-size: clamp(2.5rem, 14vw, 4rem);
+    letter-spacing: -0.06em;
+  }
+
+  .contact-header p {
+    font-size: 1.05rem;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-card,
+  .availability-card {
+    padding: 24px;
+  }
+
+  .availability-card .primary {
+    white-space: normal;
   }
 }
